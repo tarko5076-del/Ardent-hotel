@@ -1,0 +1,116 @@
+.login-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: grid;
+    padding: 18px;
+    background-color: rgba(18, 16, 12, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.login-popup-container {
+    place-self: center;
+    width: min(100%, 460px);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 28px;
+    border-radius: 28px;
+    border: 1px solid rgba(198, 93, 46, 0.08);
+    color: var(--muted);
+    background:
+        radial-gradient(circle at top right, rgba(240, 178, 76, 0.18), transparent 36%),
+        #ffffff;
+    box-shadow: 0 26px 70px rgba(19, 16, 12, 0.3);
+    font-size: 14px;
+    animation: fadeIn 0.35s;
+}
+
+.login-popup-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-popup-copy p {
+    line-height: 1.6;
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    color: var(--text);
+}
+
+.login-popup-title h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.1;
+}
+
+.login-popup-title img {
+    width: 16px;
+    cursor: pointer;
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.login-popup-inputs input {
+    padding: 14px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 16px;
+    outline: none;
+    background: #fffaf6;
+}
+
+.login-popup-container button {
+    border: none;
+    padding: 14px;
+    border-radius: 999px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary), #de7c45);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.login-popup-container button:disabled {
+    opacity: 0.75;
+    cursor: wait;
+}
+
+.login-popup-condition {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: -6px;
+}
+
+.login-popup-condition input {
+    margin-top: 5px;
+}
+
+.login-popup p span {
+    color: var(--primary);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.login-popup-switch {
+    text-align: center;
+}
+
+@media (max-width: 540px) {
+    .login-popup-container {
+        padding: 22px;
+    }
+
+    .login-popup-title h2 {
+        font-size: 1.35rem;
+    }
+}

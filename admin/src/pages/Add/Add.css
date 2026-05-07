@@ -1,0 +1,95 @@
+.add-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.add h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.add {
+    padding: 28px;
+    color: var(--admin-muted);
+    font-size: 16px;
+}
+
+.add form {
+    gap: 24px;
+}
+
+.add-grid {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.add-img-upload label {
+    display: inline-flex;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 22px;
+    background: #fff7ef;
+    border: 1px dashed rgba(184, 87, 42, 0.24);
+    cursor: pointer;
+}
+
+.add-img-upload img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.add-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.add-product-name input,
+.add-product-description textarea,
+.add-category-price select,
+.add-category-price input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 16px;
+    outline-color: var(--admin-primary);
+    background: #fffaf6;
+}
+
+.add-category-price {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 220px));
+    gap: 16px;
+}
+
+.add-btn {
+    width: fit-content;
+    min-width: 170px;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 999px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--admin-primary), #db7c46);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@media (max-width: 820px) {
+    .add-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .add {
+        padding: 20px;
+    }
+
+    .add-category-price {
+        grid-template-columns: 1fr;
+    }
+}

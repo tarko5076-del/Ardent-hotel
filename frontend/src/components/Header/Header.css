@@ -1,0 +1,108 @@
+.header {
+    position: relative;
+    min-height: 610px;
+    padding: clamp(28px, 4vw, 44px);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background:
+        linear-gradient(115deg, rgba(19, 16, 13, 0.76), rgba(44, 27, 18, 0.38)),
+        url('/header_img.png') center/cover no-repeat;
+    box-shadow: var(--shadow-lg);
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    inset: auto -12% -20% auto;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240, 178, 76, 0.36), transparent 66%);
+    pointer-events: none;
+}
+
+.header-contents {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    max-width: 540px;
+    padding: clamp(24px, 4vw, 42px);
+    margin-top: auto;
+    border-radius: 28px;
+    background: rgba(255, 250, 244, 0.14);
+    backdrop-filter: blur(3px);
+    animation: fadeIn 0.9s ease;
+}
+
+.header-contents h1 {
+    color: #fff;
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+
+.header-contents p {
+    max-width: 52ch;
+    color: rgba(255, 250, 244, 0.88);
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    line-height: 1.65;
+}
+
+.header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.header-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.header-highlights div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.header-highlights strong {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.header-highlights span {
+    color: rgba(255, 248, 240, 0.8);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+    .header {
+        min-height: 520px;
+    }
+
+    .header-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .header {
+        min-height: 500px;
+        padding: 18px;
+    }
+
+    .header-contents {
+        padding: 20px;
+    }
+}
